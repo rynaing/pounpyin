@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pounpyin (ပုံပြင်) — Their stories, kept in gold</title>
-<meta name="description" content="Pounpyin turns a year of weekly questions — asked in Burmese and English, answered by voice — into a hardcover book your family keeps forever.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Pounpyin (ပုံပြင်) — Your family's stories, in your elder's own voice</title>
+<meta name="description" content="Pounpyin is a voice-first keepsake for immigrant families: weekly prompts in Burmese and English, answered by voice in two minutes, kept as an audio archive forever. No app store needed.">
+<meta name="theme-color" content="#7c2d26">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="install-banner" id="installBanner" hidden>
+  <p><strong>Install Pounpyin</strong> — add it to your home screen for prompts &amp; reminders.</p>
+  <button class="btn btn-small" id="installBtn" type="button">Install</button>
+  <button class="install-dismiss" id="installDismiss" type="button" aria-label="Dismiss">✕</button>
+</div>
 
 <header class="topbar">
   <a class="brand" href="#top">
@@ -18,6 +31,7 @@
     <a href="#why">Why</a>
     <a href="#how">How it works</a>
     <a href="#prompts">Prompts</a>
+    <a href="#heritage">Heritage</a>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
   </nav>
@@ -29,19 +43,24 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-pattern" aria-hidden="true"></div>
-    <p class="eyebrow"><span lang="my">မင်္ဂလာပါ</span> — a gift for the ones who raised you</p>
-    <h1>Their stories,<br>kept in gold.</h1>
+    <p class="eyebrow"><span lang="my">မင်္ဂလာပါ</span> — built for immigrant families whose elders don't speak English</p>
+    <h1>Your family's stories,<br>in your elder's own voice.</h1>
     <p class="lede">
       Pounpyin sends your parents or grandparents one thoughtful question a week —
-      in <strong>Burmese and English</strong> — and they answer by <strong>voice</strong>,
-      no typing required. At year's end, their words and photos become a
-      <strong>hardcover book</strong> your family keeps forever.
+      in <strong>Burmese and English</strong>. They answer by <strong>voice</strong> in two minutes —
+      no typing, no apps to learn. Every answer is kept as an <strong>audio archive</strong>
+      your family holds forever.
     </p>
     <form class="capture" id="heroForm">
       <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
       <button class="btn" type="submit">Notify me at launch</button>
     </form>
     <p class="capture-note" id="heroNote">One email when we launch. Nothing else, ever.</p>
+    <div class="hero-badges">
+      <span class="pill">📲 No app store — installs from the web</span>
+      <span class="pill">🔔 Gentle push reminders</span>
+      <span class="pill">🎙️ Voice-first, zero typing</span>
+    </div>
     <div class="hero-script" lang="my" aria-hidden="true">ပုံပြင်</div>
   </section>
 
@@ -56,39 +75,40 @@
       </div>
       <div class="stat">
         <div class="stat-num">43%</div>
-        <p>of Burmese elders speak English proficiently — so typed, English-only memory books quietly exclude most of them. <span class="src">Pew Research Center</span></p>
+        <p>of Burmese ages 5+ speak English proficiently — so typed, English-only keepsakes quietly exclude most elders. <span class="src">Pew Research Center</span></p>
       </div>
       <div class="stat">
-        <div class="stat-num">52</div>
-        <p>questions. One a week, in the language they dream in, answered in their own voice. That's all it takes to fill a book.</p>
+        <div class="stat-num">2 min</div>
+        <p>That's all one answer takes. A tap, a story told the way they'd tell it across the dinner table — saved in their own voice.</p>
       </div>
     </div>
     <p class="why-close">
-      StoryWorth proved the idea. But it was built for grandparents who type emails in English.
+      Typed memory books were built for grandparents who write emails in English.
       Pounpyin is built for <em>ours</em> — the ones who crossed an ocean, who cook from memory,
-      whose best stories have never been written down.
+      whose best stories have never been written down. And it starts with the one thing
+      every elder already knows how to do: <em>talk</em>.
     </p>
   </section>
 
   <!-- HOW IT WORKS -->
   <section class="section section-tint" id="how">
     <p class="kicker">How it works</p>
-    <h2>Three steps. One unforgettable year.</h2>
+    <h2>Three steps. Stories for generations.</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>Gift it</h3>
-        <p>You buy Pounpyin for your mom, dad, or grandparent — for Thingyan, a birthday, or no reason at all. We invite them with a warm message in Burmese and English.</p>
+        <h3>A weekly prompt, in their language</h3>
+        <p>Every week a thoughtful question arrives by gentle push notification — written Burmese-first, with English alongside. No App Store, no accounts for them to manage: it installs straight from the web to the home screen.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <h3>They answer by voice</h3>
-        <p>Each week a new question arrives where they already are — no apps to learn, no passwords. They tap, talk, and tell it like they'd tell you across the dinner table.</p>
+        <p>One tap to record, two minutes of talking. No typing, no passwords, no tiny keyboards. If they miss a week, the prompt waits patiently — reminders nudge, never nag.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3>A book arrives</h3>
-        <p>At year's end we weave their stories and photos into a beautiful hardcover book — one copy included, more for the whole family. The kind of thing grandchildren fight over, lovingly.</p>
+        <h3>An audio archive, forever</h3>
+        <p>Every answer is saved as audio — their voice, their laugh, their pauses — with a transcript beside it. Grandchildren will hear these stories exactly as they were told.</p>
       </div>
     </div>
   </section>
@@ -97,31 +117,110 @@
   <section class="section" id="prompts">
     <p class="kicker">A taste of the questions</p>
     <h2>Written for Burmese lives,<br>not translated from someone else's.</h2>
-    <p class="section-sub">Every prompt comes in Burmese and English. Here are a few from the library:</p>
+    <p class="section-sub">Every prompt comes in Burmese and English, phrased the way an elder would want to hear it. A few from the library:</p>
     <div class="prompt-deck">
       <div class="prompt-card" id="promptCard">
-        <p class="prompt-week" id="promptWeek">Week 14</p>
-        <p class="prompt-text" id="promptText"></p>
-        <p class="prompt-hint">Answered by voice · transcribed into the book</p>
+        <p class="prompt-week" id="promptWeek">Week 1</p>
+        <p class="prompt-text" id="promptTextMy" lang="my"></p>
+        <p class="prompt-text-phon" id="promptTextPhon"></p>
+        <p class="prompt-text-en" id="promptTextEn"></p>
+        <p class="prompt-hint">Answered by voice · kept as audio, forever</p>
       </div>
       <button class="btn btn-ghost" id="shufflePrompt" type="button">↻&nbsp; Draw another prompt</button>
     </div>
   </section>
 
-  <!-- SAMPLE CHAPTER -->
-  <section class="section section-tint" id="sample">
-    <p class="kicker">What the book feels like</p>
-    <h2>Chapter 14: Thingyan, 1978</h2>
-    <div class="book">
-      <div class="book-page">
-        <p class="dropcap">The water came</p>
-        <p>before the sun did. My mother woke us by splashing our faces from a clay pot, laughing, and the whole street was already awake — buckets, hoses, strangers throwing water at strangers and everyone forgiving everyone…</p>
-        <p class="book-ellipsis">···</p>
-        <p class="book-caption">Illustrative sample — written to show the format, not a real family's story.</p>
+  <!-- HERITAGE -->
+  <section class="section section-tint" id="heritage">
+    <p class="kicker">Shared heritage</p>
+    <h2>The stories we all share.</h2>
+    <p class="section-sub">Alongside your family's private memories, Pounpyin keeps the speeches, songs, and moments that belong to every Burmese family. Embedded from YouTube — we don't host these.</p>
+    <div class="video-grid">
+      <figure class="video-card">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/gJV7fw577wk" title="Aung San Suu Kyi's first public speech, 1988" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <figcaption><strong>Aung San Suu Kyi's first public speech</strong><br>Shwedagon Pagoda, 26 August 1988 — "I could not as my father's daughter remain indifferent."</figcaption>
+      </figure>
+      <figure class="video-card">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/XxAg_wJ6Syg" title="Bogyoke Aung San speeches" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <figcaption><strong>Bogyoke Aung San — speeches</strong><br>The independence hero's addresses, broadcast for Martyrs' Day.</figcaption>
+      </figure>
+      <figure class="video-card">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/I0EqYIIp3XU" title="General Aung San's last speech, 1947" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <figcaption><strong>General Aung San's last speech</strong><br>1947 — weeks before the assassination that made him the father of the nation.</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="subhead">Classic songs</h3>
+    <p class="section-sub">The voices every Burmese household knows — songs that play at every gathering, every Thingyan, every long drive. Embedded from YouTube.</p>
+    <div class="video-grid">
+      <figure class="video-card">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/cK0rqCNSZ0Y" title="Htoo Eain Thin — Nyi Mya Chin" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <figcaption><strong>Htoo Eain Thin — "Nyi Mya Chin" (ညီမျှခြင်း)</strong><br>A timeless masterpiece from Myanmar's most beloved modern voice.</figcaption>
+      </figure>
+      <figure class="video-card">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/DQ44Lebxtxg" title="Htoo Eain Thin — Nha Lone Thar Ye Kyan Sar" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <figcaption><strong>Htoo Eain Thin — "Nha Lone Thar Ye Kyan Sar" (နှလုံးသားရဲ့ကျမ်းစာ)</strong><br>"The testament of the heart" — an HD classic.</figcaption>
+      </figure>
+      <figure class="video-card">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/hjylLMgAFGY" title="Mar Mar Aye — Kathit Pan" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <figcaption><strong>Mar Mar Aye — "Kathit Pan" (ကသစ်ပန်း)</strong><br>The golden-era queen of Burmese classical song.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DHAMMA -->
+  <section class="section" id="dhamma">
+    <p class="kicker">Dhamma for elders</p>
+    <h2>Wisdom to sit with.</h2>
+    <p class="section-sub">Short dhamma talks from beloved teachers — for quiet mornings. A small curated shelf inside Pounpyin.</p>
+    <div class="video-grid">
+      <figure class="video-card">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/FZGyYVqV29I" title="Mogok Sayadaw — How to Clear Past and Present Debts" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <figcaption><strong>Mogok Sayadawgyi</strong><br>"How to clear past and present debts" — an extract from a dhamma talk.</figcaption>
+      </figure>
+      <figure class="video-card">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/nwBGUUNLnT8" title="Mahasi Sayadaw — Basic Meditation Instruction (English)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <figcaption><strong>Mahasi Sayadaw</strong><br>Basic satipaṭṭhāna vipassanā meditation instruction — in English.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ARCHIVE -->
+  <section class="section section-tint" id="archive">
+    <p class="kicker">The archive</p>
+    <h2>Not a book on a shelf.<br>A voice that never fades.</h2>
+    <div class="archive-visual" aria-hidden="true">
+      <div class="wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <p class="archive-caption" lang="my">အသံ · စာ · အမှတ်တရ</p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">🎙️</div>
+        <p><strong>Original audio, always.</strong> Every answer is stored as a recording — never just a transcript.</p>
       </div>
-      <div class="book-page book-page-photo">
-        <div class="photo-frame"><span>your family<br>photo here</span></div>
-        <p class="photo-caption">Photos are woven through every chapter.</p>
+      <div class="stat">
+        <div class="stat-num">📝</div>
+        <p><strong>Transcribed &amp; searchable.</strong> Burmese and English transcripts sit beside each recording.</p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">🔒</div>
+        <p><strong>Private to your family.</strong> One family sees only its own stories. Nothing shared, nothing sold.</p>
       </div>
     </div>
   </section>
@@ -129,22 +228,22 @@
   <!-- PRICING -->
   <section class="section" id="pricing">
     <p class="kicker">Pricing</p>
-    <h2>One price. The whole year.</h2>
+    <h2>Less than a family dinner out.</h2>
     <div class="price-card">
       <div class="price-top">
-        <span class="price-amount">$99</span>
-        <span class="price-per">/ year</span>
+        <span class="price-amount" id="priceAmount">$–</span>
+        <span class="price-per">/ year per family</span>
       </div>
       <ul class="price-list">
-        <li>52 weekly questions in Burmese + English</li>
-        <li>Unlimited voice answers, transcribed for the book</li>
-        <li>One hardcover book included</li>
-        <li>Extra copies for the family — $39 each</li>
-        <li>Private: only your family ever sees the stories</li>
-        <li>30-day money-back promise</li>
+        <li>52 weekly prompts in Burmese + English</li>
+        <li>Unlimited voice answers — 2 minutes each</li>
+        <li>Audio archive + transcripts, kept forever</li>
+        <li>Gentle push reminders for your elder</li>
+        <li>No app store, no accounts for them</li>
+        <li>Private: only your family ever hears the stories</li>
       </ul>
       <a class="btn btn-large" href="#waitlist">Join the waitlist</a>
-      <p class="price-note">Launching soon — waitlist members get first books and founding-family pricing.</p>
+      <p class="price-note">Launching soon — founding families lock in early pricing and help shape the prompt library.</p>
     </div>
   </section>
 
@@ -155,27 +254,35 @@
     <div class="faq">
       <details>
         <summary>Is it really in Burmese?</summary>
-        <p>Yes — every question is written Burmese-first, then English alongside it. Answers can be spoken in whichever language feels natural; transcription handles both. This is the whole point of Pounpyin.</p>
+        <p>Yes — every prompt is written Burmese-first, then English alongside it. Answers can be spoken in whichever language feels natural. This is the whole point of Pounpyin.</p>
       </details>
       <details>
-        <summary>My parent doesn't use email. Will this work?</summary>
-        <p>That's exactly who we built it for. Questions arrive where your elders already are — messaging apps, not inboxes — and answering is one tap to record. No accounts, no passwords, no typing.</p>
+        <summary>My parent doesn't use apps. Will this work?</summary>
+        <p>That's exactly who we built it for. There's nothing to download from an app store — it installs straight from the web to the home screen, and answering is one tap to record. No accounts, no passwords, no typing.</p>
+      </details>
+      <details>
+        <summary>How do the reminders work?</summary>
+        <p>A gentle push notification each week when a new prompt arrives — and a soft nudge if a prompt sits unanswered. They remind; they never nag.</p>
+      </details>
+      <details>
+        <summary>Does it work on iPhone?</summary>
+        <p>Yes. On iPhone, tap Share → "Add to Home Screen" and Pounpyin behaves like an app, including reminders. On Android, you'll get an install prompt right on this page.</p>
       </details>
       <details>
         <summary>What if they miss a few weeks?</summary>
-        <p>Life happens. Missed prompts wait patiently, and gentle reminders nudge without nagging. The book is laid out from whatever's there at year's end — even twenty stories make a treasure.</p>
+        <p>Life happens. Missed prompts wait patiently. Even twenty answered prompts make a treasure — and every one is in their own voice.</p>
       </details>
       <details>
-        <summary>Who can see the stories?</summary>
-        <p>Only your family. Stories are private to your family's account, always. Nothing is shared, sold, or made public — the book belongs to you.</p>
+        <summary>Who can hear the stories?</summary>
+        <p>Only your family. Recordings are private to your family's account, always. Nothing is shared, sold, or made public.</p>
       </details>
       <details>
         <summary>What about Karen, Chin, or other languages?</summary>
-        <p>We start with Burmese and English, because that's where we can do it well. Karen and Chin communities are a priority for what's next — many of those stories are the most urgent to preserve.</p>
+        <p>We start with Burmese and English, because that's where we can do it well — and the app is built to add languages from day one. Karen and Chin communities are a priority for what's next; many of those stories are the most urgent to preserve.</p>
       </details>
       <details>
         <summary>When does it launch?</summary>
-        <p>We're building now. Join the waitlist and you'll be first to know — founding families help shape the question library.</p>
+        <p>We're building now. Join the waitlist and you'll be first to know — founding families help shape the prompt library.</p>
       </details>
     </div>
   </section>
