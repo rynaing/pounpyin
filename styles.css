@@ -266,3 +266,103 @@ body {
 }
 .footer-brand { font-family: Georgia, serif; font-size: 1.3rem; color: var(--ink); margin-bottom: 0.5rem; }
 .footer-brand [lang="my"] { color: var(--red); margin-right: 0.4rem; }
+
+/* ---------- PWA install banner ---------- */
+.install-banner {
+  position: sticky; top: 0; z-index: 60;
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: var(--red-deep); color: #f7efe0;
+  font-size: 0.9rem;
+}
+.install-banner[hidden] { display: none; }
+.install-banner p { margin: 0; flex: 1; }
+.install-banner .btn { background: var(--gold); color: var(--red-deep); padding: 0.45rem 1.1rem; font-size: 0.85rem; }
+.install-banner .btn:hover { background: var(--gold-soft); }
+.install-dismiss {
+  background: transparent; border: 0; color: #d8c9a8;
+  font-size: 1.1rem; cursor: pointer; padding: 0.25rem 0.5rem;
+}
+
+/* ---------- hero badges ---------- */
+.hero-badges {
+  display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center;
+  margin-top: 1.75rem; position: relative;
+}
+.pill {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 999px; padding: 0.45rem 1rem;
+  font-size: 0.88rem; color: var(--muted); font-weight: 600;
+}
+
+/* ---------- prompt deck: bilingual ---------- */
+.prompt-text-en {
+  font-family: Georgia, serif; font-size: 1.05rem; line-height: 1.5;
+  color: var(--muted); margin: 0 0 1rem; font-style: italic;
+}
+.prompt-text[lang="my"] { font-size: 1.5rem; line-height: 1.9; }
+
+/* ---------- video grid (heritage + dhamma) ---------- */
+.video-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+@media (max-width: 900px) { .video-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px) { .video-grid { grid-template-columns: 1fr; } }
+.video-card {
+  margin: 0; background: var(--card);
+  border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+}
+.video-wrap { position: relative; aspect-ratio: 16 / 9; background: #1d1410; }
+.video-wrap iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+}
+.video-card figcaption {
+  padding: 1rem 1.25rem; font-size: 0.92rem; color: var(--muted); line-height: 1.55;
+}
+.video-card figcaption strong { color: var(--ink); }
+
+/* ---------- archive visual ---------- */
+.archive-visual { text-align: center; margin: 2.5rem 0 1rem; }
+.wave {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  height: 90px;
+}
+.wave span {
+  width: 10px; border-radius: 6px;
+  background: linear-gradient(180deg, var(--gold), var(--red));
+  animation: wave 1.6s ease-in-out infinite;
+}
+.wave span:nth-child(1)  { height: 28px; animation-delay: 0s; }
+.wave span:nth-child(2)  { height: 52px; animation-delay: 0.12s; }
+.wave span:nth-child(3)  { height: 74px; animation-delay: 0.24s; }
+.wave span:nth-child(4)  { height: 44px; animation-delay: 0.36s; }
+.wave span:nth-child(5)  { height: 66px; animation-delay: 0.48s; }
+.wave span:nth-child(6)  { height: 34px; animation-delay: 0.6s; }
+.wave span:nth-child(7)  { height: 80px; animation-delay: 0.72s; }
+.wave span:nth-child(8)  { height: 48px; animation-delay: 0.84s; }
+.wave span:nth-child(9)  { height: 62px; animation-delay: 0.96s; }
+.wave span:nth-child(10) { height: 30px; animation-delay: 1.08s; }
+.wave span:nth-child(11) { height: 56px; animation-delay: 1.2s; }
+.wave span:nth-child(12) { height: 40px; animation-delay: 1.32s; }
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.55); }
+  50% { transform: scaleY(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wave span { animation: none; transform: scaleY(0.8); }
+}
+.archive-caption { color: var(--gold); font-size: 1.3rem; letter-spacing: 0.35em; margin: 1rem 0 0; }
+
+/* ---------- trilingual prompt card ---------- */
+.prompt-text-phon {
+  font-size: 1rem; line-height: 1.65; color: var(--ink);
+  margin: 0 0 0.8rem; padding-left: 0.9rem;
+  border-left: 3px solid var(--gold-soft);
+}
+
+/* ---------- heritage subsection heading ---------- */
+.subhead {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem; margin: 3rem 0 0.25rem; color: var(--ink);
+}
